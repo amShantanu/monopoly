@@ -1,0 +1,60 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .winner {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px;
+    color: green;
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .board-square {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .dice-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .next-turn-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .dice-button:disabled,
+  .next-turn-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
