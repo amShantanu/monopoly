@@ -14,10 +14,19 @@ const BoardSquare = ({ position, playerIndex, currentPlayer }) => {
             : "#E6E6E6"
       }}
     >
-      {playerIndex !== -1 ? `Player ${playerIndex + 1}` : position + 1}
+      <span
+        className="board-square-text"
+        style={{
+          fontSize: "16px",
+          color: "green"
+        }}
+      >
+        {playerIndex !== -1 ? `Player ${playerIndex + 1}` : position + 1}
+      </span>
     </div>
   );
 };
+
 
 const Dice = ({ onRoll, disabled }) => {
   const handleClick = () => {

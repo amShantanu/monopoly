@@ -1,60 +1,86 @@
-.board-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .winner {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 20px;
-    color: green;
-  }
-  
-  .board {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
-  }
-  
-  .board-square {
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .dice-button {
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: lightblue;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .next-turn-button {
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: lightgray;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .dice-button:disabled,
-  .next-turn-button:disabled {
-    background-color: gray;
-    cursor: not-allowed;
-  }
-  
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 600px;
+  height: 600px;
+  border: 3px solid black;
+  border-radius: 10px;
+  border-bottom: 1;
+}
+
+.board-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  background-color: #f5de6d;
+  border: 2px solid black;
+}
+
+.board-square:nth-child(odd) {
+  background-color: #7b1fa2;
+  color: white;
+  border: 2px solid black;
+}
+
+.board-square:nth-child(17),
+.board-square:nth-child(33),
+.board-square:nth-child(49),
+.board-square:nth-child(65),
+.board-square:nth-child(81),
+.board-square:nth-child(97),
+.board-square:nth-child(113),
+.board-square:nth-child(129) {
+  background-color: #008cba;
+  color: white;
+  border: 2px solid black;
+}
+
+.board-square:nth-child(32),
+.board-square:nth-child(48),
+.board-square:nth-child(64),
+.board-square:nth-child(80),
+.board-square:nth-child(96),
+.board-square:nth-child(112),
+.board-square:nth-child(128),
+.board-square:nth-child(144) {
+  background-color: #d32f2f;
+  color: white;
+  border: 2px solid black;
+}
+
+.dice-button {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.dice-button:hover {
+  background-color: #d32f2f;
+}
+
+.next-turn-button {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.next-turn-button:hover {
+  background-color: #388e3c;
+}
