@@ -11,14 +11,17 @@ body {
 
 .board {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 480px;
   height: 480px;
   border: 1px solid black;
   border-radius: 10px;
+  border-radius: 10px 10px 30px 30px;
+  -moz-border-radius: 10px 10px 30px 30px;
+  -webkit-border-radius: 10px 10px 30px 30px;
   box-shadow: 0px -8px 8px green;
-  justify-content: center;
 }
 
 .board-square {
@@ -51,7 +54,10 @@ body {
 .next-turn-button {
   font-size: 16px;
   padding: 10px;
+  box-shadow: 1px 2px #50514f;
+  transition: 0.3s;
 }
+
 .dice-button,
 .next-turn-button {
   display: inline-block;

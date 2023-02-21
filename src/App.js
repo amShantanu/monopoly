@@ -11,14 +11,14 @@ const BoardSquare = ({ position, playerIndex, currentPlayer }) => {
             ? "lightblue"
             : position % 2 === 0
             ? "#F2F2F2"
-            : "#E6E6E6"
+            : "#E6E6E6",
       }}
     >
       <span
         className="board-square-text"
         style={{
           fontSize: "16px",
-          color: "green"
+          color: "green",
         }}
       >
         {playerIndex !== -1 ? `Player ${playerIndex + 1}` : position + 1}
@@ -26,7 +26,6 @@ const BoardSquare = ({ position, playerIndex, currentPlayer }) => {
     </div>
   );
 };
-
 
 const Dice = ({ onRoll, disabled }) => {
   const handleClick = () => {
@@ -83,18 +82,12 @@ const Board = () => {
 
   return (
     <div className="board-container">
-      {winner !== -1 && (
-        <div className="winner">
-          Player {winner + 1} wins!
-        </div>
-      )}
-      <div className="board">
-        {board}
-      </div>
+      {winner !== -1 && <div className="winner">Player {winner + 1} wins!</div>}
+      <div className="board">{board}</div>
       {winner === -1 && (
         <>
           <Dice
-            onRoll={diceRoll => movePlayer(turn, diceRoll)}
+            onRoll={(diceRoll) => movePlayer(turn, diceRoll)}
             disabled={turnDone}
           />
           {turnDone && (
@@ -108,4 +101,4 @@ const Board = () => {
   );
 };
 
-export default Board
+export default Board;
