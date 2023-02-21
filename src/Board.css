@@ -1,4 +1,9 @@
+body {
+  background-color: #1f1e1e;
+}
+
 .board-container {
+  transform: translateY(5rem);
   margin: auto;
   width: 500px;
   text-align: center;
@@ -6,13 +11,15 @@
 
 .board {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   width: 480px;
   height: 480px;
-  border: 2px solid black;
-  margin: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px -8px 8px green;
+  justify-content: center;
 }
-
 
 .board-square {
   width: 50px;
@@ -36,15 +43,19 @@
   font-size: 16px;
   padding: 10px;
   margin-right: 10px;
+  box-shadow: 1px 3px #50514f;
+  outline: none;
+  transition: 0.3s;
 }
 
 .next-turn-button {
   font-size: 16px;
   padding: 10px;
 }
-.dice-button, .next-turn-button {
+.dice-button,
+.next-turn-button {
   display: inline-block;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
   text-align: center;
@@ -56,19 +67,25 @@
   width: 100px;
 }
 
-.dice-button:hover, .next-turn-button:hover {
-  background-color: #3e8e41;
+.dice-button:hover,
+.next-turn-button:hover {
+  background-color: #327434;
+  outline: none;
+  cursor: pointer;
+  transform: translateY(8px);
 }
 
-.dice-button:disabled, .next-turn-button:disabled {
+.dice-button:disabled,
+.next-turn-button:disabled {
   background-color: #cccccc;
-  color: #666666;
+  color: #4d4c4c;
   cursor: default;
 }
 
 .winner {
-  font-size: 24px;
+  font-size: 44px;
   font-weight: bold;
   margin: 20px;
   text-align: center;
+  color: #cccccc;
 }
